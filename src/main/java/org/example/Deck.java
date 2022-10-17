@@ -11,6 +11,7 @@ public class Deck extends Card implements Iterable<Deck> {
     private final static int INDEX36START = 4;
     private final static int INDEX36FINISH = 13;
     private final static int INDEX54START = 0;
+    private final Random random = new Random();
     Card[] deck;
 
     public Deck(int deckNumber) {
@@ -64,7 +65,6 @@ public class Deck extends Card implements Iterable<Deck> {
     }
 
     public void shuffle() {
-        Random random = new Random();
         for (int i = 0; i < deck.length; i++) {
             Card tmp = deck[i];
             int rnd = random.nextInt(0, deck.length);
