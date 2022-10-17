@@ -35,6 +35,7 @@ public class Deck extends Card implements Iterable<Deck> {
 
     //можливо метод addCard можна написати простіше та елегантніше (мені не подобається) з використанням проміжних методів, можливо пізніше перепишу
     public void addCard(int startIndex, int finishIndex) {
+        // Чому би не зробити вкладений цикл по значенням перерахування Suite?
         for (int i = startIndex; i < finishIndex; i++) {
             deck = Arrays.copyOf(deck, deck.length + 1);
             deck[deck.length - 1] = new Card(dignityArr[i], levelArr[i], Suite.DIAMONDS);
