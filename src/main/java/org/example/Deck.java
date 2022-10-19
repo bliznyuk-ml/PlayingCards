@@ -64,7 +64,7 @@ public class Deck extends Card implements Iterable<Deck> {
     }
 
     public void shuffle() {
-        Random random = new Random();
+        Random random = new Random(); // екземпляр цього класу краще зропити змінною класу (полем)
         for (int i = 0; i < deck.length; i++) {
             Card tmp = deck[i];
             int rnd = random.nextInt(0, deck.length);
